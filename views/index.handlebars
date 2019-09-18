@@ -1,6 +1,18 @@
- <div id="wrapper">
-      <h1>Scrape it</h1>
-      <h2><i>Like MMMM chicka MMM chicka</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
-    </div>
+<div id="wrapper">
+  <h1>Get the Facts</h1>
+  <h2><i>What's going on in Cannabis today?</i></h2>
+  <div id="articles">{{#each articles}}
+    <h1 data-id={{this._id}} class="article_title">{{this.title}}</h1>
+    <h2>{{this.category}}</h2>
+    <p>{{this.link}}</p>
+    {{/each}}
+  </div>
+  <div id="notes">
+    {{!-- <h2>Notes</h2> --}}
+    {{!-- <input id='note-title'>
+    <textarea id='bodyinput' name='body'></textarea>
+    <button data-id={{this._id}} id='savenote'>Keep Note</button>
+     --}}
+     
+  </div>
+</div>
