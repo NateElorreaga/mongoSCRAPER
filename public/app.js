@@ -1,5 +1,5 @@
 // Whenever someone clicks a p tag
-$(document).on("click", "h1", function () {
+$(document).on("click", ".article_title", function () {
     // Empty the notes from the note section
     $("#notes").empty();
     // Save the id from the p tag
@@ -16,11 +16,11 @@ $(document).on("click", "h1", function () {
         // The title of the article
         $("#notes").append("<h2>" + data.title + "</h2>");
         // An input to enter a new title
-        $("#notes").append("<input id='titleinput' name='title' >");
+        $("#notes").append("<input class='form-control' id='titleinput' name='title' >");
         // A textarea to add a new note body
-        $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+        $("#notes").append("<textarea class='form-control' id='bodyinput' name='body'></textarea>");
         // A button to submit a new note, with the id of the article saved to it
-        $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+        $("#notes").append("<button class='btn btn-success' data-id='" + data._id + "' id='savenote' type='button'>Save Note</button>");
   
         // If there's a note in the article
         if (data.note) {
