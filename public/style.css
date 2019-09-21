@@ -45,4 +45,8 @@
   #savenote{
       margin-top: 10px;
   }
+  .category{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+  }
 

@@ -1,22 +1,24 @@
 <div class="container">
-      <div class="heading">
-      <h1>What's going on in Cannabis today?</h1>
-      <h2><i>Get the Facts</i></h2>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-8 overflow-auto">
-          <div id="articles">
-            {{#each articles}}
-            <h1 data-id={{this._id}} class="article_title">{{this.title}}</h1>
-            <h2>{{this.category}}</h2>
-            <a href={{this.link}}><button class="btn btn-success">READ THE ARTICLE HERE!</button></a>
-            {{/each}}
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="form-group" id="notes">
-          </div>
-        </div>
+  <div class="heading">
+    <h1>What's going on in Cannabis today?</h1>
+    <h2><i>Get the Facts</i></h2>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-8 overflow-auto">
+      <div id="articles">
+        {{#each articles}}
+        <h3 class="category">{{this.category}}</h3>
+        <h1 data-id={{this._id}} class="article_title">{{this.title}}</h1>
+        <a href={{this.link}}><button class="btn btn-success">READ THE ARTICLE HERE!</button></a>
+        <br>
+        <br>
+        {{/each}}
       </div>
     </div>
+    <div class="col-4">
+      <div class="form-group" id="notes">
+      </div>
+    </div>
+  </div>
+</div>
